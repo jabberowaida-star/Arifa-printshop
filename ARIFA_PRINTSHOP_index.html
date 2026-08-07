@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ARIFA PRINTSHOP</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+html{scroll-behavior:smooth}
+body{background:#f5f5f5;color:#333}
+header{display:flex;justify-content:space-between;align-items:center;padding:20px 40px;background:linear-gradient(135deg,#4f8cff,#7b2ff7);color:#fff}
+.logo{font-size:40px;font-weight:bold}
+nav{position:sticky;top:0;background:#fff;padding:15px;text-align:center;box-shadow:0 2px 10px rgba(0,0,0,.1)}
+nav a{text-decoration:none;color:#333;margin:0 10px;padding:10px 18px;border-radius:30px;transition:.3s}
+nav a:hover{background:#4f8cff;color:#fff}
+.hero{padding:90px 20px;text-align:center;background:linear-gradient(135deg,#00c6ff,#0072ff);color:#fff}
+.hero h1{font-size:52px}
+.hero p{margin:15px auto;max-width:700px}
+.btn{display:inline-block;margin-top:20px;padding:12px 24px;background:#ff9800;color:#fff;text-decoration:none;border-radius:30px}
+.slider img{width:100%;height:380px;object-fit:cover}
+.slides{display:none}
+.services,.reviews,.contact{padding:60px 30px}
+.title{text-align:center;margin-bottom:30px;color:#0072ff}
+.cards,.review-box{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.card,.review{background:#fff;border-radius:15px;overflow:hidden;box-shadow:0 4px 12px rgba(0,0,0,.15);transition:.3s}
+.card:hover,.review:hover{transform:translateY(-8px)}
+.card img{width:100%;height:180px;object-fit:cover}
+.card h3,.card p,.review{padding:15px}
+.contact{background:#222;color:#fff;text-align:center}
+footer{background:#111;color:#fff;text-align:center;padding:20px}
+.messenger{position:fixed;right:20px;bottom:20px;width:60px;height:60px;border-radius:50%;background:#0084ff;color:#fff;text-decoration:none;display:flex;align-items:center;justify-content:center;font-size:30px}
+</style>
+</head>
+<body>
+<header><div class="logo">ARIFA PRINTSHOP</div><div>LOGO HERE</div></header>
+<nav>
+<a href="#home">Home</a>
+<a href="#services">Services</a>
+<a href="#reviews">Reviews</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<section class="hero" id="home">
+<h1>Welcome to ARIFA PRINTSHOP</h1>
+<p>Fast • Affordable • High Quality Printing Services</p>
+<a class="btn" href="#services">Explore Services</a>
+</section>
+
+<section class="slider">
+<div class="slides"><img src="images/slide1.jpg"></div>
+<div class="slides"><img src="images/slide2.jpg"></div>
+<div class="slides"><img src="images/slide3.jpg"></div>
+</section>
+
+<section class="services" id="services">
+<h2 class="title">Our Services</h2>
+<div class="cards">
+<div class="card"><img src="images/printing.jpg"><h3>Printing</h3><p>Colored & B/W Printing</p></div>
+<div class="card"><img src="images/photocopy.jpg"><h3>Photocopy</h3><p>Fast and clear photocopy.</p></div>
+<div class="card"><img src="images/id.jpg"><h3>ID Printing</h3><p>PVC & School IDs.</p></div>
+<div class="card"><img src="images/tarpaulin.jpg"><h3>Tarpaulin</h3><p>Events & Business.</p></div>
+</div>
+</section>
+
+<section class="reviews" id="reviews">
+<h2 class="title">Customer Reviews</h2>
+<div class="review-box">
+<div class="review">⭐⭐⭐⭐⭐<br>Excellent service!</div>
+<div class="review">⭐⭐⭐⭐⭐<br>Affordable prices!</div>
+<div class="review">⭐⭐⭐⭐⭐<br>Highly recommended.</div>
+</div>
+</section>
+
+<section class="contact" id="contact">
+<h2>Contact Us</h2>
+<p>Address: Your Address</p>
+<p>Phone: 09XXXXXXXXX</p>
+<p>Email: your@email.com</p>
+</section>
+
+<footer>© 2026 ARIFA PRINTSHOP</footer>
+<a class="messenger" href="#">💬</a>
+<script>
+let i=0;
+function showSlides(){
+ let s=document.getElementsByClassName('slides');
+ for(let x=0;x<s.length;x++)s[x].style.display='none';
+ i++; if(i>s.length)i=1;
+ if(s.length>0)s[i-1].style.display='block';
+ setTimeout(showSlides,3000);
+}
+showSlides();
+</script>
+</body></html>
